@@ -3,20 +3,20 @@
 import random
 
 def game():
-    user_choice = input("Choose [r]ock, [p]aper or [s]cissors ")
-    computer_choice = random.choice(['r', 'p', 's'])
+    user_choice = input("Choose rock, paper or scissors: ")
+    computer_choice = random.choice(['rock', 'paper', 'scissors'])
 
     if user_choice == computer_choice:
         print("It` is a tie")
 
     if win(user_choice, computer_choice):
-        print("You won your choose was " + user_choice + " and computer choose was" + computer_choice)
+        print("You won. You choosed " + user_choice + " and computer choosed " + computer_choice)
     else:
-        print("You loose your choose was " + user_choice + " and computer choose was " + computer_choice)
+        print("You  lost. You choosed " + user_choice + " and computer choosed " + computer_choice)
 
 
 def win(player, computer):
-    if (player == 'r' and computer == 's') or (player == 'p' and computer == 'r') or (player == 's' and computer == 'p'):
+    if (player == 'rock' and computer == 'scissors') or (player == 'paper' and computer == 'rock') or (player == 'scissors' and computer == 'paper'):
         return True
     return False
 
